@@ -97,7 +97,7 @@ a { color: inherit; }
   isolation: isolate;
   display: grid;
   align-items: center;
-  min-height: clamp(520px, calc(100svh - 69px), 760px);
+  min-height: max(520px, calc(100svh - 69px));
   background: #25241b;
   color: #fff;
 }
@@ -125,6 +125,7 @@ a { color: inherit; }
 .hero-copy .btn:focus-visible { outline-color: #fff; }
 
 @media (max-width: 920px) {
+  .hero--photo { min-height: max(520px, calc(100svh - 105px)); }
   .site-bar { column-gap: 12px; }
   .site-links { order: 3; width: 100%; gap: 4px 16px; }
   .actions { gap: 8px; }
