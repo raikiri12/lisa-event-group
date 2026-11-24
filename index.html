@@ -17,9 +17,8 @@
 <link rel="icon" href="assets/lisa.svg" type="image/svg+xml">
 
 <link rel="stylesheet" href="assets/motion/motion.css">
-<link rel="stylesheet" href="assets/lisa.css?v=4">
+<link rel="stylesheet" href="assets/lisa.css?v=5">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
-<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 </head>
 <body>
 <!-- Service / photo hero / Manrope / picture-develops / Maslovo Residence -->
@@ -47,42 +46,58 @@
     </div>
   </section>
 
-  <section class="section" id="projects" style="--h:1" aria-labelledby="projects-h">
+  <section class="section" id="projects" aria-labelledby="projects-h">
     <div class="wrap">
       <h2 id="projects-h">Проекты</h2>
-      <div class="project-layout">
-        <div class="project-copy">
-          <h3>От рассвета до заката</h3>
-          <p class="location">Maslovo Residence</p>
-          <p>Свадебная программа по мотивам одного дня. Каждый номер создали специально для этого вечера.</p>
-        </div>
-        <figure class="develop" data-moment="picture-develops"><img src="assets/maslovo-03.jpg" srcset="assets/maslovo-03-384.jpg 384w, assets/maslovo-03-640.jpg 640w, assets/maslovo-03.jpg 1080w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 1500px) 48vw, 725px" width="1080" height="1350" loading="lazy" alt="Драпировки и флористика на свадебном ужине"></figure>
-      </div>
-      <div class="project-photos">
-        <img src="assets/maslovo-02.jpg" srcset="assets/maslovo-02-192.jpg 192w, assets/maslovo-02-384.jpg 384w, assets/maslovo-02-640.jpg 640w, assets/maslovo-02.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 46vw, 640px" width="1080" height="1351" loading="lazy" alt="Сервировка свадебного стола">
-        <img src="assets/maslovo-04.jpg" srcset="assets/maslovo-04-192.jpg 192w, assets/maslovo-04-384.jpg 384w, assets/maslovo-04-640.jpg 640w, assets/maslovo-04.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 46vw, 640px" width="1080" height="1351" loading="lazy" alt="Свадебный зал в вечернем свете">
-      </div>
-      <div class="photo-series">
-        <h3>Свадьба в клубе «Поляна»</h3>
-        <div class="project-photos project-photos--series">
-          <img src="assets/polyana-1-600.webp" srcset="assets/polyana-1-256.webp 256w, assets/polyana-1-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Молодожёны на площадке загородного клуба">
-          <img src="assets/polyana-2-600.webp" srcset="assets/polyana-2-256.webp 256w, assets/polyana-2-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Цветочные композиции на свадебной церемонии">
-          <img src="assets/polyana-3-600.webp" srcset="assets/polyana-3-256.webp 256w, assets/polyana-3-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Свадебная площадка под стеклянной крышей">
-          <img src="assets/polyana-4-600.webp" srcset="assets/polyana-4-256.webp 256w, assets/polyana-4-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Молодожёны и гости на свадебном ужине под открытым небом">
-        </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3 id="project-0">От рассвета до заката</h3>
+          <p class="project-venue">Maslovo Residence</p>
+          <details class="project-series">
+            <summary aria-labelledby="project-0 project-action-0">
+              <span class="project-cover"><img src="assets/maslovo-03.jpg" srcset="assets/maslovo-03-384.jpg 384w, assets/maslovo-03-640.jpg 640w, assets/maslovo-03.jpg 1080w" sizes="(max-width: 680px) calc(100vw - 32px), 46vw" width="1080" height="1350" loading="lazy" decoding="async" alt="Драпировки и флористика на свадебном ужине"></span>
+              <span class="series-action" id="project-action-0"><span class="series-open">Смотреть серию</span><span class="series-close">Свернуть серию</span><span class="series-mark" aria-hidden="true"></span></span>
+            </summary>
+            <p>Свадебная программа по мотивам одного дня. Каждый номер создали специально для этого вечера.</p>
+            <div class="series-photos">
+              <img src="assets/maslovo-02.jpg" srcset="assets/maslovo-02-192.jpg 192w, assets/maslovo-02-384.jpg 384w, assets/maslovo-02-640.jpg 640w, assets/maslovo-02.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 23vw, 320px" width="1080" height="1351" loading="lazy" decoding="async" alt="Сервировка свадебного стола">
+              <img src="assets/maslovo-04.jpg" srcset="assets/maslovo-04-192.jpg 192w, assets/maslovo-04-384.jpg 384w, assets/maslovo-04-640.jpg 640w, assets/maslovo-04.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 23vw, 320px" width="1080" height="1351" loading="lazy" decoding="async" alt="Свадебный зал в вечернем свете">
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <h3 id="project-1">Свадьба в «Поляне»</h3>
+          <p class="project-venue">Загородный клуб «Поляна»</p>
+          <details class="project-series">
+            <summary aria-labelledby="project-1 project-action-1">
+              <span class="project-cover"><img src="assets/polyana-1-600.webp" srcset="assets/polyana-1-256.webp 256w, assets/polyana-1-600.webp 600w" sizes="(max-width: 680px) calc(100vw - 32px), 46vw" width="600" height="750" loading="lazy" decoding="async" alt="Молодожёны на площадке загородного клуба"></span>
+              <span class="series-action" id="project-action-1"><span class="series-open">Смотреть серию</span><span class="series-close">Свернуть серию</span><span class="series-mark" aria-hidden="true"></span></span>
+            </summary>
+            <p>Церемония и свадебный ужин под открытым небом.</p>
+            <div class="series-photos">
+              <img src="assets/polyana-2-600.webp" srcset="assets/polyana-2-256.webp 256w, assets/polyana-2-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" decoding="async" alt="Цветочные композиции на свадебной церемонии">
+              <img src="assets/polyana-3-600.webp" srcset="assets/polyana-3-256.webp 256w, assets/polyana-3-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" decoding="async" alt="Свадебная площадка под стеклянной крышей">
+              <img src="assets/polyana-4-600.webp" srcset="assets/polyana-4-256.webp 256w, assets/polyana-4-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" decoding="async" alt="Молодожёны и гости на свадебном ужине под открытым небом">
+            </div>
+          </details>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section band" id="formats" style="--h:1" aria-labelledby="formats-h">
-    <div class="wrap grid service-layout">
-      <div><h2 id="formats-h">Услуги</h2><p class="lead">9 лет организуем события под ключ, от идеи до реализации</p></div>
+  <section class="section services" id="formats" aria-labelledby="formats-h">
+    <div class="wrap service-layout">
+      <div class="services-intro">
+        <h2 id="formats-h">Услуги</h2>
+        <p class="lead">9 лет организуем события под ключ, от идеи до реализации</p>
+        <img class="services-photo" src="assets/services-table-640.webp" srcset="assets/services-table-384.webp 384w, assets/services-table-640.webp 640w" sizes="(max-width: 680px) calc(100vw - 32px), 46vw" width="640" height="480" loading="lazy" decoding="async" alt="Сервировка и флористика на свадебном ужине ЛИСА">
+      </div>
       <ul class="service-list">
-        <li><a href="#brief" data-format="Свадьба">Свадьбы</a></li>
-        <li><a href="#brief" data-format="Корпоратив">Корпоративы</a></li>
-        <li><a href="#brief" data-format="Частный праздник">Частные события</a></li>
-        <li><a href="#brief" data-format="Спецпроект">Спецпроекты</a></li>
-        <li><a href="#brief" data-format="Event-маркетинг">Event-маркетинг</a></li>
+        <li><a href="#brief" data-format="Свадьба"><span><strong>Свадьбы</strong><small>Концепция, подготовка и координация дня</small></span><span class="service-action">Обсудить</span></a></li>
+        <li><a href="#brief" data-format="Корпоратив"><span><strong>Корпоративы</strong><small>Праздники и встречи для команд</small></span><span class="service-action">Обсудить</span></a></li>
+        <li><a href="#brief" data-format="Частный праздник"><span><strong>Частные события</strong><small>Праздники для семьи и друзей</small></span><span class="service-action">Обсудить</span></a></li>
+        <li><a href="#brief" data-format="Спецпроект"><span><strong>Спецпроекты</strong><small>События по индивидуальной концепции</small></span><span class="service-action">Обсудить</span></a></li>
+        <li><a href="#brief" data-format="Event-маркетинг"><span><strong>Event-маркетинг</strong><small>Мероприятия для брендов и их аудитории</small></span><span class="service-action">Обсудить</span></a></li>
       </ul>
     </div>
   </section>
@@ -101,12 +116,10 @@
   <section class="section review-band band" id="reviews" style="--h:1" aria-labelledby="reviews-h">
     <div class="wrap">
       <h2 id="reviews-h">Отзывы</h2>
-      <p class="review-note">Демонстрационные примеры. Реальные отзывы добавим позже.</p>
       <div class="review-grid">
         <blockquote><p>«Мы спокойно провели день с близкими, потому что команда взяла на себя координацию».</p></blockquote>
         <blockquote><p>«На первой встрече обсудили бюджет, а в день свадьбы всё шло по согласованному плану».</p></blockquote>
       </div>
-      <a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/">Открыть профиль в Instagram</a>
     </div>
   </section>
 
@@ -151,7 +164,6 @@
   </div>
 </footer>
 <script type="module" src="assets/motion/motion.js"></script>
-<script type="module" src="assets/moments/moments.js"></script>
 <script src="assets/lisa.js" defer></script>
 </body>
 </html>

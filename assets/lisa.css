@@ -41,37 +41,94 @@ a { color: inherit; }
 .brand small { font: 500 .875rem/1 var(--font); }
 .site-links a, .header-contact { font-size: .875rem; font-weight: 600; }
 .site-links a:hover, .header-contact { text-decoration: underline; text-underline-offset: .24em; }
-.project-layout, .team-layout, .service-layout, .footer-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 5vw, 80px); }
+.team-layout, .service-layout, .footer-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 5vw, 80px); }
 .location, .lead { color: var(--muted); }
 .lead { font-size: clamp(1rem, 1.5vw, 1.25rem); }
-.develop img, .team-layout img, .project-photos img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.team-layout img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .btn { min-height: 48px; padding: 10px 16px; border: 1px solid var(--accent); border-radius: 999px; font: 600 .9375rem/1.4 var(--font); text-decoration: none; text-align: center; white-space: normal; }
 .btn.btn--primary { background: var(--accent); color: white; }
 .btn.btn--secondary { background: transparent; color: var(--accent); }
 .btn.btn--primary:hover { background: #343c28; }
 .btn.btn--secondary:hover { background: var(--surface); }
-.section { padding-block: clamp(32px, 4.5vw, 64px); min-height: auto; }
+.section { padding-block: clamp(28px, 3.6vw, 52px); min-height: auto; }
 .section h2 { margin-bottom: 20px; }
 .band { background: var(--surface); }
-.project-layout { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
-.project-copy > * + *, .team-copy > p { margin-top: 12px; }
-.develop { position: relative; overflow: hidden; margin: 0; aspect-ratio: 5 / 3; }
-.project-photos { display: grid; grid-template-columns: repeat(2,minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
-.project-photos img { aspect-ratio: 2 / 1; }
-.service-list { margin: 24px 0 0; padding: 0; list-style: none; }
+
+.team-copy > p { margin-top: 12px; }
+
+
+
+
 .quiet-link { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent); text-underline-offset: .24em; }
 .service-layout { align-items: start; }
-.service-list { margin: 0; }
-.service-list li { border-top: 1px solid var(--line); }
-.service-list li:last-child { border-bottom: 1px solid var(--line); }
-.service-list a { display: flex; min-height: 52px; align-items: center; font-weight: 600; text-decoration: none; }
-.service-list a:hover { text-decoration: underline; text-underline-offset: .24em; }
+
+
+
+
+
 .team-layout img { max-height: 560px; object-position: center 42%; }
 .team-copy h3:not(:first-of-type) { margin-top: 24px; }
-.photo-series { margin-top: clamp(24px, 3vw, 44px); }
-.project-photos--series { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.project-photos--series img { aspect-ratio: 4 / 5; }
-.review-note { margin-bottom: 16px; color: var(--muted); }
+
+
+
+
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); }
+.project-card { padding: clamp(12px, 2vw, 24px); background: var(--surface); }
+.project-venue { margin-top: 4px; color: var(--muted); }
+.project-series { margin-top: 12px; }
+.project-series summary { display: block; cursor: pointer; position: relative; }
+.project-series summary::-webkit-details-marker { display: none; }
+.project-cover { display: block; aspect-ratio: 16 / 10; overflow: hidden; }
+.project-cover img, .series-photos img, .services-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-cover img { object-position: 50% 57%; }
+.project-cover img[src*='polyana-1'] { object-position: 50% 75%; }
+.series-action {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 999px;
+  font-size: .875rem;
+  font-weight: 600;
+}
+.project-series summary:hover .series-action { background: #fff; }
+.series-close, .project-series[open] .series-open { display: none; }
+.project-series[open] .series-close { display: inline; }
+.series-mark { width: 7px; height: 7px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; rotate: 45deg; }
+.project-series[open] .series-mark { rotate: 225deg; }
+.project-series > p { margin-top: 12px; }
+.series-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.series-photos img { aspect-ratio: 4 / 3; }
+.services { background: #3a432e; color: #fff; }
+.services-intro .lead { color: #ebece3; }
+.services-photo { height: auto; aspect-ratio: 4 / 3; max-height: 320px; margin-top: 16px; }
+.service-list { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #8d9782; }
+.service-list li { border-top: 1px solid #8d9782; }
+.service-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  min-height: 68px;
+  text-decoration: none;
+}
+.service-list a:hover { background: #48533b; }
+.services :focus-visible { outline-color: #fff; }
+.service-list strong { display: block; font-size: 1.125rem; font-weight: 600; }
+.service-list small { display: block; color: #ebece3; font-size: .875rem; }
+.service-action { flex: none; font-size: .875rem; text-decoration: underline; text-underline-offset: .24em; }
 .review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .review-grid blockquote { margin: 0; padding: 12px 16px; border-inline-start: 1px solid var(--line); }
 .brand img { display: block; width: 96px; height: auto; border-radius: 8px; }
@@ -134,7 +191,7 @@ a { color: inherit; }
   .site-bar { min-height: 0; padding-block: 4px; row-gap: 0; }
   .site-links { justify-content: space-between; column-gap: 8px; }
   .site-links a { font-size: .8125rem; }
-  .project-layout, .team-layout, .service-layout, .footer-main { grid-template-columns: minmax(0,1fr); }
+  .team-layout, .service-layout, .footer-main { grid-template-columns: minmax(0,1fr); }
   .hero--photo { min-height: max(470px, calc(100svh - 97px)); align-items: end; }
   .hero-image { object-position: 54% 50%; }
   .hero--photo::after {
@@ -142,8 +199,10 @@ a { color: inherit; }
   }
   .hero-layout { padding-block: 32px; }
   .actions .btn { width: 100%; }
-  .develop { aspect-ratio: 4 / 3; }
-  .project-photos--series { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+
+
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+  .services-photo { max-height: 250px; }
   .review-grid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .team-layout img { height: auto; }
   .footer-links { justify-content: start; }
