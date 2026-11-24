@@ -17,7 +17,7 @@
 <link rel="icon" href="assets/lisa.svg" type="image/svg+xml">
 
 <link rel="stylesheet" href="assets/motion/motion.css">
-<link rel="stylesheet" href="assets/lisa.css?v=5">
+<link rel="stylesheet" href="assets/lisa.css?v=6">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 </head>
 <body>
@@ -39,7 +39,8 @@
       <div class="hero-copy hero__text">
         <p class="location">Москва</p>
         <h1 id="hero-h">Свадьбы и мероприятия</h1>
-        <p class="lead hero__lead">Свадьбы, корпоративы и частные события под ключ</p>
+        <p class="lead hero__lead">Свадьбы, корпоративы и частные события</p>
+        <p class="hero-experience"><strong>9 лет</strong> организуем события под ключ</p>
         <div class="hero-price"><strong>Стоимость по смете</strong><p>Укажите формат, дату и число гостей</p></div>
         <div class="actions"><a class="btn btn--primary" href="#brief">Получить смету</a><a class="btn btn--secondary" href="https://t.me/ann_saakyan">Написать в Telegram</a></div>
       </div>
@@ -85,20 +86,19 @@
     </div>
   </section>
 
-  <section class="section services" id="formats" aria-labelledby="formats-h">
-    <div class="wrap service-layout">
-      <div class="services-intro">
-        <h2 id="formats-h">Услуги</h2>
-        <p class="lead">9 лет организуем события под ключ, от идеи до реализации</p>
-        <img class="services-photo" src="assets/services-table-640.webp" srcset="assets/services-table-384.webp 384w, assets/services-table-640.webp 640w" sizes="(max-width: 680px) calc(100vw - 32px), 46vw" width="640" height="480" loading="lazy" decoding="async" alt="Сервировка и флористика на свадебном ужине ЛИСА">
+  <section class="section services band" id="formats" aria-labelledby="formats-h">
+    <div class="wrap">
+      <h2 id="formats-h">Услуги</h2>
+      <div class="service-layout services-layout">
+        <div class="services-media"><img class="services-photo" src="assets/services-table-640.webp" srcset="assets/services-table-384.webp 384w, assets/services-table-640.webp 640w" sizes="(max-width: 680px) calc(100vw - 32px), 46vw" width="640" height="480" loading="lazy" decoding="async" alt="Сервировка и флористика на свадебном ужине ЛИСА"></div>
+        <ul class="service-list">
+          <li><a href="#brief" data-format="Свадьба"><span><strong>Свадьбы</strong><small>Концепция, подготовка и координация дня</small></span><span class="service-action">Обсудить</span></a></li>
+          <li><a href="#brief" data-format="Корпоратив"><span><strong>Корпоративы</strong><small>Праздники и встречи для команд</small></span><span class="service-action">Обсудить</span></a></li>
+          <li><a href="#brief" data-format="Частный праздник"><span><strong>Частные события</strong><small>Праздники для семьи и друзей</small></span><span class="service-action">Обсудить</span></a></li>
+          <li><a href="#brief" data-format="Спецпроект"><span><strong>Спецпроекты</strong><small>События по индивидуальной концепции</small></span><span class="service-action">Обсудить</span></a></li>
+          <li><a href="#brief" data-format="Event-маркетинг"><span><strong>Event-маркетинг</strong><small>Мероприятия для брендов и их аудитории</small></span><span class="service-action">Обсудить</span></a></li>
+        </ul>
       </div>
-      <ul class="service-list">
-        <li><a href="#brief" data-format="Свадьба"><span><strong>Свадьбы</strong><small>Концепция, подготовка и координация дня</small></span><span class="service-action">Обсудить</span></a></li>
-        <li><a href="#brief" data-format="Корпоратив"><span><strong>Корпоративы</strong><small>Праздники и встречи для команд</small></span><span class="service-action">Обсудить</span></a></li>
-        <li><a href="#brief" data-format="Частный праздник"><span><strong>Частные события</strong><small>Праздники для семьи и друзей</small></span><span class="service-action">Обсудить</span></a></li>
-        <li><a href="#brief" data-format="Спецпроект"><span><strong>Спецпроекты</strong><small>События по индивидуальной концепции</small></span><span class="service-action">Обсудить</span></a></li>
-        <li><a href="#brief" data-format="Event-маркетинг"><span><strong>Event-маркетинг</strong><small>Мероприятия для брендов и их аудитории</small></span><span class="service-action">Обсудить</span></a></li>
-      </ul>
     </div>
   </section>
 
@@ -116,9 +116,22 @@
   <section class="section review-band band" id="reviews" style="--h:1" aria-labelledby="reviews-h">
     <div class="wrap">
       <h2 id="reviews-h">Отзывы</h2>
-      <div class="review-grid">
-        <blockquote><p>«Мы спокойно провели день с близкими, потому что команда взяла на себя координацию».</p></blockquote>
-        <blockquote><p>«На первой встрече обсудили бюджет, а в день свадьбы всё шло по согласованному плану».</p></blockquote>
+      <div class="review-slider">
+        <div class="review-slides" id="review-slides" aria-live="polite">
+          <figure class="review-slide">
+            <blockquote><p>«Мы спокойно провели день с близкими, потому что команда взяла на себя координацию».</p></blockquote>
+            <figcaption>Мария и Алексей</figcaption>
+          </figure>
+          <figure class="review-slide">
+            <blockquote><p>«На первой встрече обсудили бюджет, а в день свадьбы всё шло по согласованному плану».</p></blockquote>
+            <figcaption>Екатерина и Илья</figcaption>
+          </figure>
+        </div>
+        <div class="review-controls" hidden>
+          <button class="review-nav" type="button" data-review-step="-1" aria-controls="review-slides" aria-label="Предыдущий отзыв">‹</button>
+          <span class="review-count" aria-label="Номер отзыва">1 / 2</span>
+          <button class="review-nav" type="button" data-review-step="1" aria-controls="review-slides" aria-label="Следующий отзыв">›</button>
+        </div>
       </div>
     </div>
   </section>
@@ -164,6 +177,6 @@
   </div>
 </footer>
 <script type="module" src="assets/motion/motion.js"></script>
-<script src="assets/lisa.js" defer></script>
+<script src="assets/lisa.js?v=6" defer></script>
 </body>
 </html>

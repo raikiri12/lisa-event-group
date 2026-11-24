@@ -31,3 +31,25 @@ form.addEventListener('submit', (event) => {
   draft.showModal();
 });
 form.querySelector('button[type="submit"]').disabled = false;
+
+const reviewSlides = document.querySelector('.review-slides');
+const reviewControls = document.querySelector('.review-controls');
+const reviews = [...reviewSlides.querySelectorAll('.review-slide')];
+const reviewCount = reviewControls.querySelector('.review-count');
+let activeReview = 0;
+
+function showReview(index) {
+  activeReview = (index + reviews.length) % reviews.length;
+  reviews.forEach((review, i) => { review.hidden = i !== activeReview; });
+  reviewCount.textContent = (activeReview + 1) + ' / ' + reviews.length;
+}
+
+reviewControls.querySelectorAll('[data-review-step]').forEach((button) => {
+  button.addEventListener('click', () => showReview(activeReview + Number(button.dataset.reviewStep)));
+});
+
+if (reviews.length > 1) {
+  reviewSlides.classList.add('is-ready');
+  showReview(0);
+  reviewControls.hidden = false;
+}
