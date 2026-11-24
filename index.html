@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<html lang="ru" data-type="service" data-radius="soft" data-buttons="pill" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 <link rel="icon" href="assets/lisa.svg" type="image/svg+xml">
 
 <link rel="stylesheet" href="assets/motion/motion.css">
-<link rel="stylesheet" href="assets/lisa.css">
+<link rel="stylesheet" href="assets/lisa.css?v=2">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 </head>
@@ -26,7 +26,7 @@
 <a class="skip-link" href="#main">К содержанию</a>
 <header class="site-header nav">
   <div class="wrap site-bar">
-    <a class="brand" href="#main">ЛИСА <small>Event Group</small></a>
+    <a class="brand" href="#main" aria-label="ЛИСА Event Group, на главную"><img src="assets/lisa-brand.jpg" width="126" height="53" alt="Логотип ЛИСА"><small>Event Group</small></a>
     <nav class="site-links" aria-label="Разделы сайта">
       <a href="#projects">Проекты</a><a href="#formats">Услуги</a><a href="#team">Команда</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
     </nav>
@@ -55,7 +55,6 @@
           <h3>От рассвета до заката</h3>
           <p class="location">Maslovo Residence</p>
           <p>Свадебная программа по мотивам одного дня. Каждый номер создали специально для этого вечера.</p>
-          <a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/reel/DdrM21JtEm1/">Посмотреть видео проекта</a>
         </div>
         <figure class="develop" data-moment="picture-develops"><img src="assets/maslovo-03.jpg" srcset="assets/maslovo-03-384.jpg 384w, assets/maslovo-03-640.jpg 640w, assets/maslovo-03.jpg 1080w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 1500px) 48vw, 725px" width="1080" height="1350" loading="lazy" alt="Драпировки и флористика на свадебном ужине"></figure>
       </div>
@@ -63,11 +62,15 @@
         <img src="assets/maslovo-02.jpg" srcset="assets/maslovo-02-192.jpg 192w, assets/maslovo-02-384.jpg 384w, assets/maslovo-02-640.jpg 640w, assets/maslovo-02.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 46vw, 640px" width="1080" height="1351" loading="lazy" alt="Сервировка свадебного стола">
         <img src="assets/maslovo-04.jpg" srcset="assets/maslovo-04-192.jpg 192w, assets/maslovo-04-384.jpg 384w, assets/maslovo-04-640.jpg 640w, assets/maslovo-04.jpg 1080w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), (max-width: 1500px) 46vw, 640px" width="1080" height="1351" loading="lazy" alt="Свадебный зал в вечернем свете">
       </div>
-      <ul class="project-links" aria-label="Другие свадебные проекты">
-        <li><a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/reel/DDmxZkdvwwG/">Камерная свадьба в Richter</a></li>
-        <li><a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/reel/DAEj2TmCyao/">Свадьба в Art Village Club</a></li>
-        <li><a class="quiet-link" href="https://www.instagram.com/country__club__polyana/p/C-kTa47izaM/">Свадьба в клубе «Поляна»</a></li>
-      </ul>
+      <div class="photo-series">
+        <h3>Свадьба в клубе «Поляна»</h3>
+        <div class="project-photos project-photos--series">
+          <img src="assets/polyana-1-600.webp" srcset="assets/polyana-1-256.webp 256w, assets/polyana-1-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Молодожёны на площадке загородного клуба">
+          <img src="assets/polyana-2-600.webp" srcset="assets/polyana-2-256.webp 256w, assets/polyana-2-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Цветочные композиции на свадебной церемонии">
+          <img src="assets/polyana-3-600.webp" srcset="assets/polyana-3-256.webp 256w, assets/polyana-3-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Свадебная площадка под стеклянной крышей">
+          <img src="assets/polyana-4-600.webp" srcset="assets/polyana-4-256.webp 256w, assets/polyana-4-600.webp 600w" sizes="(max-width: 680px) calc((100vw - 48px) / 2), 23vw" width="600" height="750" loading="lazy" alt="Молодожёны и гости на свадебном ужине под открытым небом">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -98,7 +101,11 @@
   <section class="section review-band band" id="reviews" style="--h:1" aria-labelledby="reviews-h">
     <div class="wrap">
       <h2 id="reviews-h">Отзывы</h2>
-      <p>Отзывы клиентов собраны в актуальном профиля ЛИСА</p>
+      <p class="review-note">Демонстрационные примеры. Реальные отзывы добавим позже.</p>
+      <div class="review-grid">
+        <blockquote><p>«Мы спокойно провели день с близкими, потому что команда взяла на себя координацию».</p></blockquote>
+        <blockquote><p>«На первой встрече обсудили бюджет, а в день свадьбы всё шло по согласованному плану».</p></blockquote>
+      </div>
       <a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/">Открыть профиль в Instagram</a>
     </div>
   </section>
@@ -128,9 +135,19 @@
   <div class="wrap">
     <div class="footer-main">
       <div><h2>Контакты</h2><p>ЛИСА Event Group, Москва</p></div>
-      <div class="footer-links"><a class="quiet-link" href="https://t.me/ann_saakyan">Анна в Telegram</a><a class="quiet-link" href="https://www.instagram.com/lisa.eventgroup/">Instagram агентства</a></div>
+      <div class="footer-links">
+        <a class="quiet-link social-link" href="https://t.me/ann_saakyan">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21.7 3.3 2.9 10.6c-.9.4-.9.9-.2 1.2l4.8 1.5 1.9 5.9c.2.6.3.8.7.8.3 0 .5-.1.7-.4l2.3-2.3 4.9 3.6c.9.5 1.5.3 1.7-.8l3.2-15.2c.3-1.3-.5-1.9-1.2-1.6ZM9.1 13l9.4-5.9c.4-.3.8-.1.5.2l-7.8 7.1-.3 3.2L9.1 13Z"/></svg>
+          Анна в Telegram
+        </a>
+        <a class="quiet-link social-link" href="https://www.instagram.com/lisa.eventgroup/">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/></svg>
+          Instagram агентства
+        </a>
+      </div>
     </div>
-    <p class="footer-credit">Декор Maslovo Residence: FLORA POLITIKA. Фото: @ctapocta, @v_moteuna, @milovidova_wed. Портрет команды: @lisa.eventgroup.</p>
+    <p class="footer-credit">Декор Maslovo Residence: FLORA POLITIKA. Фото: @ctapocta, @v_moteuna, @milovidova_wed. Фото свадьбы в клубе «Поляна»: @aleksakapustina. Портрет команды: @lisa.eventgroup.</p>
+    <p class="demo-note">Демо-версия сайта</p>
   </div>
 </footer>
 <script type="module" src="assets/motion/motion.js"></script>
